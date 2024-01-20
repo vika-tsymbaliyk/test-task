@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktest_task=self.webpackChunktest_task||[]).push([[963],{963:(s,t,e)=>{e.r(t),e.d(t,{default:()=>k});e(791);var a=e(184);const k=()=>(0,a.jsx)("div",{children:"CatalogPage"})}}]);
+//# sourceMappingURL=963.d7334646.chunk.js.map
