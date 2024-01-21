@@ -7,6 +7,8 @@ import CatalogList from '../components/CatalogList/CatalogList'
 import FilterForm from '../components/FilterForm/FilterForm'
 
 import makes from '../components/FilterForm/makes.json'
+import { Container } from '../styles/container'
+import { PageWrap } from "./pages.styled";
 
 const CatalogPage = () => {
   const cars = useSelector(selectVisibleCars);
@@ -18,17 +20,15 @@ const CatalogPage = () => {
   useEffect(()=>{dispatch(fetchCars({ page: 1, limit: 12 }))}, [dispatch])
 
   return (
-    <div>
+    <Container>
+      <PageWrap>
       {isLoading && <Loader/>}
       {error && <p>{error}</p>}
 
       <FilterForm makes={makes}/>
-
       <CatalogList cars={cars}/>
-
-
-
-    </div>
+      </PageWrap>
+    </Container>
   )
 }
  export default CatalogPage
