@@ -14,6 +14,7 @@ const PopUp = ({ car, isOpen, onClose }) => {
       transform: "translate(-50%, -50%)",
     },
   };
+  console.log(car);
 
   const handleClick = () => {};
   return (
@@ -47,12 +48,12 @@ const PopUp = ({ car, isOpen, onClose }) => {
         <p>Rental Conditions: </p>
         <div>
           <p>
-            {/* {car.age.split(":")[0]} : <span> {car.age.split(":")[1]}</span>{" "} */}
+            {/* {car.age} */}
           </p>
-          {/* <p>{car.rentalConditions.split("\n")[1]}</p>
-          <p>{car.rentalConditions.split("\n")[2]}</p> */}
+          {/* <p>{car.rentalConditions</p>
+          <p>{car.rentalConditions</p> */}
           <p>
-            Mileage: <span>{car.mileage}</span>
+            Mileage: <span>{car.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
           </p>
           <p>
             Price: <span>{car.rentalPrice}</span>

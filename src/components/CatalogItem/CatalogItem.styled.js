@@ -10,6 +10,7 @@ export const CarCardWrap = styled.div`
 
 export const ImgWrap = styled.div`
   margin-bottom: 14px;
+  position: relative;
 `;
 
 export const CarImg = styled.img`
@@ -38,5 +39,13 @@ export const CarTitle = styled.span`
 `;
 
 export const CarTitleSpan = styled.span`
-    color: #3470FF;
+    color: ${({ theme }) => theme.colors.primary};
 `;
+
+export const InputStyled = styled.input`
+  position: absolute;
+  opacity: 1;
+  cursor: pointer;
+  top: 14px;
+  right: 14px;
+  `

@@ -1,14 +1,15 @@
 import React from 'react'
+import { ButtonStyled } from './Button.styled'
 
-const Button = ({ text, onClick}) => {
+const Button = ({ text, onClick, width}) => {
   return (
-    <button
+    <ButtonStyled
       type="button"
       onClick={onClick}
-    //   $width={width}
+      $width={width}
     >
       {text}
-    </button>
+    </ButtonStyled>
   )
 }
 

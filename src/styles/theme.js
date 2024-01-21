@@ -1,9 +1,10 @@
 export const theme =Object.freeze({
     colors: {
-        primary: '#7986cb',
-        secondary: '#2b2b2b',
-        success: '#4caf50',
-        danger: '#f44336 ',
+        primary: '#3470FF',
+        hover: '#0B44CD;',
+        textMain: '#000',
+        textAlign:'#fff ',
+        textGrey:'#8A8A89',
         
         bg: 'linear-gradient(0deg, rgba(129,199,140,1) 0%, rgba(255,255,255,1) 100%)',
         bgTop: '#6f9071' ,

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { selectError, selectFavorites, selectIsLoading } from '../redux/selectors'
 import { Container } from '../styles/container';
-import { PageWrap } from './pages.styled';
+import { CenterDiv, PageWrap } from './pages.styled';
 import Loader from '../components/Loader/Loader';
 import CatalogList from '../components/CatalogList/CatalogList.jsx'
 
@@ -17,7 +17,7 @@ console.log(favorites);
   return (
     <Container>
       <PageWrap>
-      {isLoading && <Loader/>}
+      <CenterDiv>{isLoading && <Loader/>}</CenterDiv>
       {error && <p>{error}</p>}
 
       <CatalogList cars = {favorites}/>

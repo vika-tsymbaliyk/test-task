@@ -8,7 +8,7 @@ import FilterForm from '../components/FilterForm/FilterForm'
 
 import makes from '../components/FilterForm/makes.json'
 import { Container } from '../styles/container'
-import { PageWrap } from "./pages.styled";
+import { CenterDiv, PageWrap } from "./pages.styled";
 
 const CatalogPage = () => {
   const cars = useSelector(selectVisibleCars);
@@ -22,7 +22,7 @@ const CatalogPage = () => {
   return (
     <Container>
       <PageWrap>
-      {isLoading && <Loader/>}
+      <CenterDiv>{isLoading && <Loader/>}</CenterDiv>
       {error && <p>{error}</p>}
 
       <FilterForm makes={makes}/>

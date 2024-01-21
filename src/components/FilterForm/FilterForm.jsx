@@ -3,6 +3,7 @@ import Select from "react-select";
 import { useDispatch, useSelector } from "react-redux";
 import {selectFilter} from "../../redux/selectors";
 import { setFilter } from "../../redux/filterSlise";
+import { Label } from "./FilterForm.styleg";
 
 const FilterForm = ({ makes }) => {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const FilterForm = ({ makes }) => {
   
   return (
     <div>
+      <Label htmlFor="make">Car brand
       <Select
         options={makes.map((make) => ({ value: make, label: make }))}
         isSearchable
@@ -22,6 +24,7 @@ const FilterForm = ({ makes }) => {
         isClearable = {true}
         placeholder="Enter the text"
       />
+      </Label>
     </div>
   );
 };

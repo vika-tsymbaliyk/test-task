@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CarCardWrap, CarImg, ImgWrap, TitleWrap, CarTitle, CarTitleSpan } from "./CatalogItem.styled";
+import { CarCardWrap, CarImg, ImgWrap, TitleWrap, CarTitle, CarTitleSpan, InputStyled } from "./CatalogItem.styled";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/selectors";
 import { addFavorite, removeFavorite } from "../../redux/favoritesSlice";
@@ -40,7 +40,7 @@ const CatalogItem = ({ car }) => {
   return (
     <CarCardWrap>
       <ImgWrap>
-       <input
+       <InputStyled
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
