@@ -15,7 +15,10 @@ const carsSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(fetchCars.fulfilled, (state, action) => {
-        state.items = action.payload;
+        const uniqueCars = action.payload.filter(newCar =>
+          !state.items.some(existingCar => existingCar.id === newCar.id)
+        );
+        state.items = [...state.items, ...uniqueCars];
         state.isLoading = false;
       })
       .addCase(fetchCars.rejected, (state, action) => {
