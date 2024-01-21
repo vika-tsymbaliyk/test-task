@@ -1,24 +1,22 @@
 {
   "files": {
     "main.css": "/test-task/static/css/main.df731936.css",
-    "main.js": "/test-task/static/js/main.6f94f477.js",
-    "static/js/851.d0eaf2e0.chunk.js": "/test-task/static/js/851.d0eaf2e0.chunk.js",
-    "static/js/717.52dbf19f.chunk.js": "/test-task/static/js/717.52dbf19f.chunk.js",
-    "static/js/705.ef936bcc.chunk.js": "/test-task/static/js/705.ef936bcc.chunk.js",
-    "static/js/948.ec7fce80.chunk.js": "/test-task/static/js/948.ec7fce80.chunk.js",
+    "main.js": "/test-task/static/js/main.6e65e604.js",
+    "static/js/851.30043b6e.chunk.js": "/test-task/static/js/851.30043b6e.chunk.js",
+    "static/js/588.557e11d4.chunk.js": "/test-task/static/js/588.557e11d4.chunk.js",
+    "static/js/705.650b1899.chunk.js": "/test-task/static/js/705.650b1899.chunk.js",
     "static/js/630.111a6bda.chunk.js": "/test-task/static/js/630.111a6bda.chunk.js",
     "static/media/home-img.jpg": "/test-task/static/media/home-img.53e987af6521f7579aee.jpg",
     "index.html": "/test-task/index.html",
     "main.df731936.css.map": "/test-task/static/css/main.df731936.css.map",
-    "main.6f94f477.js.map": "/test-task/static/js/main.6f94f477.js.map",
-    "851.d0eaf2e0.chunk.js.map": "/test-task/static/js/851.d0eaf2e0.chunk.js.map",
-    "717.52dbf19f.chunk.js.map": "/test-task/static/js/717.52dbf19f.chunk.js.map",
-    "705.ef936bcc.chunk.js.map": "/test-task/static/js/705.ef936bcc.chunk.js.map",
-    "948.ec7fce80.chunk.js.map": "/test-task/static/js/948.ec7fce80.chunk.js.map",
+    "main.6e65e604.js.map": "/test-task/static/js/main.6e65e604.js.map",
+    "851.30043b6e.chunk.js.map": "/test-task/static/js/851.30043b6e.chunk.js.map",
+    "588.557e11d4.chunk.js.map": "/test-task/static/js/588.557e11d4.chunk.js.map",
+    "705.650b1899.chunk.js.map": "/test-task/static/js/705.650b1899.chunk.js.map",
     "630.111a6bda.chunk.js.map": "/test-task/static/js/630.111a6bda.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df731936.css",
-    "static/js/main.6f94f477.js"
+    "static/js/main.6e65e604.js"
   ]
 }
