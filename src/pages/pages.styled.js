@@ -5,6 +5,7 @@ export const PageWrap = styled.div`
 `;
 export const CenterDiv = styled.div`
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -43,7 +44,15 @@ export const HomeImg = styled.img`
   width:50%;
   height:auto;
 `;
+// FAVORITES  
 
-
-//CATALOG PAGE
+export const TextFavPage = styled.p`
+font-weight: 500;
+text-align: justify;
+font-size: ${({ theme }) => theme.fontSizes.medium};
+color: ${({ theme }) => theme.colors.textMain};
+line-height: 1.43;
+margin-bottom: 100px;
+padding-top:100px;
+`;
 

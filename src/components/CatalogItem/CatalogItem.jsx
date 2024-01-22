@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { CarCardWrap, CarImg, ImgWrap, TitleWrap, CarTitle, CarTitleSpan, InputStyled } from "./CatalogItem.styled";
+import { CarCardWrap, CarImg, ImgWrap, TitleWrap, CarTitle, CarTitleSpan, InputStyled, Text, TextWpap, LabelInput } from "./CatalogItem.styled";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/selectors";
 import { addFavorite, removeFavorite } from "../../redux/favoritesSlice";
 import Button from "../Button/Button";
 import PopUp from "../PopUp/PopUp";
+import { IoHeartOutline,  IoHeartSharp } from "react-icons/io5";
 
 const CatalogItem = ({ car }) => {
 
@@ -40,11 +41,15 @@ const CatalogItem = ({ car }) => {
   return (
     <CarCardWrap>
       <ImgWrap>
+      
+      <LabelInput>
        <InputStyled
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
+        {isChecked ? < IoHeartSharp color='#3470FF' size='2em'/> : <IoHeartOutline color = "rgba(255, 255, 255, 0.8)" size='2em'/>}
+        </LabelInput>
         <CarImg src={car.img} alt={car.make}/>
       </ImgWrap>
       <TitleWrap>
@@ -53,17 +58,17 @@ const CatalogItem = ({ car }) => {
         </CarTitle>
         <p>{car.rentalPrice}</p>
       </TitleWrap>
-      <div>
-        <p>{car.address.split(',')[1]}</p>
-        <p>{car.address.split(',')[2]}</p>
-        <p>{car.rentalCompany}</p>
-        <p>{car.type}</p>
-        <p>{car.model}</p>
-        <p>{car.mileage}</p>
-        <p>{car.accessories[0]}</p>
-      </div>
+      <TextWpap>
+        <Text>{car.address.split(',')[1]}</Text>
+        <Text>{car.address.split(',')[2]}</Text>
+        <Text>{car.rentalCompany}</Text>
+        <Text>{car.type}</Text>
+        <Text>{car.model}</Text>
+        <Text>{car.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</Text>
+        <Text>{car.accessories[0]}</Text>
+      </TextWpap>
 
-      <Button onClick={handleItemClick} text={'Learn more'} />
+      <Button onClick={handleItemClick} text={'Learn more'} width={274} />
 
       {isOpen && <PopUp isOpen = {isOpen} car={car} onClose={handleItemClose}/>}
 

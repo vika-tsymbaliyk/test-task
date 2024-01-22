@@ -38,12 +38,14 @@ const CatalogPage = () => {
   return (
     <Container>
       <PageWrap>
-        <CenterDiv>{isLoading && <Loader />}</CenterDiv>
-        {error && <Toaster/>}
+        <CenterDiv>
+          {isLoading && <Loader />}
+          {error && <Toaster position="bottom-right" reverseOrder={false} />}
 
-        <FilterForm makes={makes} />
-        <CatalogList cars={cars} />
-        <LoadMoreBtn onClick={handleLoadMore} />
+          <FilterForm makes={makes} />
+          <CatalogList cars={cars} />
+          <LoadMoreBtn onClick={handleLoadMore} />
+        </CenterDiv>
       </PageWrap>
     </Container>
   );

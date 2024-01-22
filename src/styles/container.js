@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  max-width: 1184px;
+  max-width: 1440px;
   height: 550px;
   margin: 0 auto;
-  align-items: center;
-  justify-content: center;
 `;

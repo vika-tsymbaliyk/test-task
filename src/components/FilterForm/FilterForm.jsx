@@ -3,7 +3,7 @@ import Select from "react-select";
 import { useDispatch, useSelector } from "react-redux";
 import {selectFilter} from "../../redux/selectors";
 import { setFilter } from "../../redux/filterSlise";
-import { Label } from "./FilterForm.styleg";
+import { FormWrap, Label, SelectStyled } from "./FilterForm.styleg";
 
 const FilterForm = ({ makes }) => {
   const dispatch = useDispatch();
@@ -14,8 +14,8 @@ const FilterForm = ({ makes }) => {
   };
   
   return (
-    <div>
-      <Label htmlFor="make">Car brand
+    <FormWrap>
+      <Label htmlFor="make">Car brand</Label>
       <Select
         options={makes.map((make) => ({ value: make, label: make }))}
         isSearchable
@@ -23,9 +23,10 @@ const FilterForm = ({ makes }) => {
         onChange={handleMakeChange}
         isClearable = {true}
         placeholder="Enter the text"
+        styles={SelectStyled}
       />
-      </Label>
-    </div>
+      
+    </FormWrap>
   );
 };
 
