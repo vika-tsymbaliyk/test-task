@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/test-task/static/css/main.b7aced98.css",
-    "main.js": "/test-task/static/js/main.4bface78.js",
+    "main.js": "/test-task/static/js/main.6c7f8f4c.js",
     "static/js/851.84b88494.chunk.js": "/test-task/static/js/851.84b88494.chunk.js",
-    "static/js/722.adf46ecb.chunk.js": "/test-task/static/js/722.adf46ecb.chunk.js",
-    "static/js/705.2c8ce2d5.chunk.js": "/test-task/static/js/705.2c8ce2d5.chunk.js",
-    "static/js/124.a665c975.chunk.js": "/test-task/static/js/124.a665c975.chunk.js",
+    "static/js/722.baacf39c.chunk.js": "/test-task/static/js/722.baacf39c.chunk.js",
+    "static/js/705.e5ab14a7.chunk.js": "/test-task/static/js/705.e5ab14a7.chunk.js",
+    "static/js/997.eac89bd6.chunk.js": "/test-task/static/js/997.eac89bd6.chunk.js",
+    "static/js/630.111a6bda.chunk.js": "/test-task/static/js/630.111a6bda.chunk.js",
     "static/media/home-img.jpg": "/test-task/static/media/home-img.53e987af6521f7579aee.jpg",
     "index.html": "/test-task/index.html",
     "main.b7aced98.css.map": "/test-task/static/css/main.b7aced98.css.map",
-    "main.4bface78.js.map": "/test-task/static/js/main.4bface78.js.map",
+    "main.6c7f8f4c.js.map": "/test-task/static/js/main.6c7f8f4c.js.map",
     "851.84b88494.chunk.js.map": "/test-task/static/js/851.84b88494.chunk.js.map",
-    "722.adf46ecb.chunk.js.map": "/test-task/static/js/722.adf46ecb.chunk.js.map",
-    "705.2c8ce2d5.chunk.js.map": "/test-task/static/js/705.2c8ce2d5.chunk.js.map",
-    "124.a665c975.chunk.js.map": "/test-task/static/js/124.a665c975.chunk.js.map"
+    "722.baacf39c.chunk.js.map": "/test-task/static/js/722.baacf39c.chunk.js.map",
+    "705.e5ab14a7.chunk.js.map": "/test-task/static/js/705.e5ab14a7.chunk.js.map",
+    "997.eac89bd6.chunk.js.map": "/test-task/static/js/997.eac89bd6.chunk.js.map",
+    "630.111a6bda.chunk.js.map": "/test-task/static/js/630.111a6bda.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b7aced98.css",
-    "static/js/main.4bface78.js"
+    "static/js/main.6c7f8f4c.js"
   ]
 }
