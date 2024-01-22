@@ -37,11 +37,13 @@ text-align: justify;
 font-size: ${({ theme }) => theme.fontSizes.medium};
 color: ${({ theme }) => theme.colors.textMain};
 line-height: 1.43;
-  
 `;
 
 export const HomeImg = styled.img`
   width:50%;
   height:auto;
-
 `;
+
+
+//CATALOG PAGE
+
