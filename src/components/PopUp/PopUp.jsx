@@ -1,66 +1,73 @@
 import React from "react";
 import Modal from "react-modal";
 import Button from "../Button/Button";
-import { CarImgModal } from "./PopUp.styled";
+import {
+  ModalWrap,
+  CarImgModal,
+  CloseBtn,
+  customStyles,
+  TitleCar,
+  TitleSpan,
+  Text,
+  WrapText,
+  DescriptionText,
+  TextSubpoint,
+  ConditionsWrap,
+} from "./PopUp.styled";
+import { IoCloseSharp } from "react-icons/io5";
 
 const PopUp = ({ car, isOpen, onClose }) => {
-  const customStyles = {
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-    },
-  };
   console.log(car);
 
   const handleClick = () => {};
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} style={customStyles}>
-      <div>
-        <button onClick={onClose}> close</button>
+      <ModalWrap>
+        <CloseBtn onClick={onClose}>
+          {" "}
+          <IoCloseSharp color="rgba(18, 20, 23, 1)" size="1.5em" />
+        </CloseBtn>
         <CarImgModal src={car.img} alt="" />
-        <p>
-          {car.make} <span>{car.model},</span> {car.year}{" "}
-        </p>
-        <div>
-          <p>{car.address.split(",")[1]}</p>
-          <p>{car.address.split(",")[2]}</p>
-          <p>Id: {car.id}</p>
-          <p>Year: {car.year}</p>
-          <p>Type: {car.type}</p>
-          <p>Fuel Consumption: {car.fuelConsumption}</p>
-          <p>Engine Size: {car.engineSize}</p>
-        </div>
+        <TitleCar>
+          {car.make} <TitleSpan>{car.model},</TitleSpan> {car.year}
+        </TitleCar>
+        <WrapText>
+          <Text>{car.address.split(",")[1]}</Text>
+          <Text>{car.address.split(",")[2]}</Text>
+          <Text>Id: {car.id}</Text>
+          <Text>Year: {car.year}</Text>
+          <Text>Type: {car.type}</Text>
+          <Text>Fuel Consumption: {car.fuelConsumption}</Text>
+          <Text>Engine Size: {car.engineSize}</Text>
+        </WrapText>
 
-        <p>{car.description}</p>
-        <p>Accessories and functionalities: </p>
-        <div>
-          <p>{car.accessories[0]}</p>
-          <p>{car.accessories[1]}</p>
-          <p>{car.accessories[2]}</p>
-          <p>{car.functionalities[0]}</p>
-          <p>{car.functionalities[1]}</p>
-          <p>{car.functionalities[2]}</p>
-        </div>
-        <p>Rental Conditions: </p>
-        <div>
+        <DescriptionText>{car.description}</DescriptionText>
+        <TextSubpoint>Accessories and functionalities: </TextSubpoint>
+        <WrapText>
+          <Text>{car.accessories[0]}</Text>
+          <Text>{car.accessories[1]}</Text>
+          <Text>{car.accessories[2]}</Text>
+          <Text>{car.functionalities[0]}</Text>
+          <Text>{car.functionalities[1]}</Text>
+          <Text>{car.functionalities[2]}</Text>
+        </WrapText>
+        <ConditionsWrap>
+          <TextSubpoint>Rental Conditions: </TextSubpoint>
+          <p>{car.age}</p>
+          <p>{car.rentalConditions}</p>
+          <p>{car.rentalConditions}</p>
           <p>
-            {/* {car.age} */}
-          </p>
-          {/* <p>{car.rentalConditions</p>
-          <p>{car.rentalConditions</p> */}
-          <p>
-            Mileage: <span>{car.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
+            Mileage:{" "}
+            <span>
+              {car.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </span>
           </p>
           <p>
             Price: <span>{car.rentalPrice}</span>
           </p>
-        </div>
-        <Button text={"Rental car"} onClick={handleClick} />
-      </div>
+        </ConditionsWrap>
+        <Button text={"Rental car"} onClick={handleClick} width={168} />
+      </ModalWrap>
     </Modal>
   );
 };

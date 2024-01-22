@@ -34,6 +34,7 @@ export const CarTitle = styled.span`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom:8px;
 `;
 
 export const CarTitleSpan = styled.span`
@@ -80,8 +81,4 @@ export const TextWpap = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   height:40px;
-
-  & > ${Text}:last-child::after {
-    content: none;
-  }
 `;
