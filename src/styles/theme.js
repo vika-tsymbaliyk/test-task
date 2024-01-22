@@ -6,11 +6,7 @@ export const theme =Object.freeze({
         textAlign:'#fff ',
         textGrey:'#8A8A89',
         
-        bg: 'linear-gradient(0deg, rgba(129,199,140,1) 0%, rgba(255,255,255,1) 100%)',
-        bgTop: '#6f9071' ,
-        light: '#f4f9f5',
-        dark:  '#212522' ,
-        bord: 'ffffff',
+        background: '#f9f9f9',
       },
       media: {
         tablet: '(min-width: 768px)',

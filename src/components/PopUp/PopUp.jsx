@@ -13,13 +13,18 @@ import {
   DescriptionText,
   TextSubpoint,
   ConditionsWrap,
+  RentalWrap,
+  Condition,
+  ConditionSpan,
 } from "./PopUp.styled";
 import { IoCloseSharp } from "react-icons/io5";
 
 const PopUp = ({ car, isOpen, onClose }) => {
-  console.log(car);
+  const handleClick = () => {
+    window.location.href = "tel:+380730000000";
+  };
+  const age = car.rentalConditions.split("\n")[0];
 
-  const handleClick = () => {};
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} style={customStyles}>
       <ModalWrap>
@@ -51,21 +56,26 @@ const PopUp = ({ car, isOpen, onClose }) => {
           <Text>{car.functionalities[1]}</Text>
           <Text>{car.functionalities[2]}</Text>
         </WrapText>
-        <ConditionsWrap>
+        <RentalWrap>
           <TextSubpoint>Rental Conditions: </TextSubpoint>
-          <p>{car.age}</p>
-          <p>{car.rentalConditions}</p>
-          <p>{car.rentalConditions}</p>
-          <p>
-            Mileage:{" "}
-            <span>
-              {car.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </span>
-          </p>
-          <p>
-            Price: <span>{car.rentalPrice}</span>
-          </p>
-        </ConditionsWrap>
+          <ConditionsWrap>
+            <Condition>
+              {age.split(":")[0]} :{" "}
+              <ConditionSpan> {age.split(":")[1]}</ConditionSpan>
+            </Condition>
+            <Condition>{car.rentalConditions.split("\n")[1]}</Condition>
+            <Condition>{car.rentalConditions.split("\n")[2]}</Condition>
+            <Condition>
+              Mileage:
+              <ConditionSpan>
+                {car.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </ConditionSpan>
+            </Condition>
+            <Condition>
+              Price: <ConditionSpan>{car.rentalPrice}</ConditionSpan>
+            </Condition>
+          </ConditionsWrap>
+        </RentalWrap>
         <Button text={"Rental car"} onClick={handleClick} width={168} />
       </ModalWrap>
     </Modal>

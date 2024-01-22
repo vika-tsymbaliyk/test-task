@@ -22,7 +22,6 @@ export const customStyles = {
     border: "none",
     overflow: "hidden auto",
     margin: "0 auto",
-    scrollbars: "none",
   },
 };
 export const ModalWrap = styled.div`
@@ -31,7 +30,7 @@ export const ModalWrap = styled.div`
   color: ${({ theme }) => theme.colors.textMain};
   width: 100%;
   height: 100%;
-  padding-bottom:40px;
+  padding-bottom: 40px;
 `;
 export const CarImgModal = styled.img`
   width: 469px;
@@ -81,7 +80,6 @@ export const Text = styled.p`
     content: none;
   }
 `;
-
 export const WrapText = styled.p`
   display: flex;
   flex-wrap: wrap;
@@ -105,9 +103,31 @@ export const TextSubpoint = styled.p`
   margin-bottom: 8px;
 `;
 export const ConditionsWrap = styled.div`
-  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 24px;
+`;
+export const RentalWrap = styled.div`
+  padding-top: 10px;
+`;
+export const Condition = styled.p`
+  display: flex;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 35px;
+  background: ${({ theme }) => theme.colors.background};
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.24px;
+`;
+export const ConditionSpan = styled.span`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.24px;
 `;
